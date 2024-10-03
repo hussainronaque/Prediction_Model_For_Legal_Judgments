@@ -2,7 +2,11 @@ import pytesseract
 from pdf2image import convert_from_path
 import os
 
-pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files (x86)\\Tesseract-OCR\\tesseract.exe'
+# For Windows users, you may need to specify the path to the Tesseract executable
+#pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files (x86)\\Tesseract-OCR\\tesseract.exe'
+
+#For Mac users, you may need to specify the path to the Tesseract executable
+pytesseract.pytesseract.tesseract_cmd = '/opt/homebrew/bin/tesseract'
 
 def pdf_to_images(pdf_path):
     # Converts a PDF file to images (one image per page).
@@ -37,7 +41,7 @@ def pdf_ocr(pdf_path, output_dir='ocr_output'):
 
 if __name__ == '__main__':
     # Path to your PDF file
-    pdf_file_path = 'judgements/crl.a._57_2019.pdf'
+    pdf_file_path = 'judgements/2024LHC4027.pdf'
     
     # Perform OCR on the PDF
     pdf_ocr(pdf_file_path)
