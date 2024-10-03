@@ -44,4 +44,4 @@ if __name__ == '__main__':
     pdf_file_path = 'judgements/2024LHC4027.pdf'
     
     # Perform OCR on the PDF
-    pdf_ocr(pdf_file_path)
+    pdf_ocr(pdf_file_path) 
