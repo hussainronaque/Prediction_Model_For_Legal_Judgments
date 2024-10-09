@@ -40,6 +40,14 @@ def download_pdfs(base_url, output_dir='judgements'):
         print(f"Downloaded: {file_name}")
 
 if __name__ == '__main__':
-    # Replace with the actual URL of the high court website
-    high_court_url = 'https://data.lhc.gov.pk/reported_judgments/judgments_approved_for_reporting'
-    download_pdfs(high_court_url)
+    # List of URLs to download PDFs from
+    url = [
+        'https://data.lhc.gov.pk/reported_judgments/judgments_approved_for_reporting',
+        'https://www.supremecourt.gov.pk/judgement-search/#1573035933449-63bb4a39-ac81',
+        'https://www.peshawarhighcourt.gov.pk/PHCCMS/reportedJudgments.php?action=search',
+        'https://caselaw.shc.gov.pk/caselaw/search-all/search'
+    ]
+    
+    # Loop through each URL and download PDFs
+    for i in url:
+        download_pdfs(i)

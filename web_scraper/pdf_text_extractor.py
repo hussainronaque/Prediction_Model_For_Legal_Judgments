@@ -40,8 +40,12 @@ def pdf_ocr(pdf_path, output_dir='ocr_output'):
     print(f"OCR completed. Extracted text saved to {output_file}")
 
 if __name__ == '__main__':
-    # Path to your PDF file
-    pdf_file_path = 'judgements/2024LHC4027.pdf'
-    
-    # Perform OCR on the PDF
-    pdf_ocr(pdf_file_path) 
+    # Iterate over all files in the folder
+    for file_name in os.listdir('judgements'):
+        # Check if the file is a PDF
+        if file_name.endswith('.pdf'):
+            pdf_file_path = os.path.join('judgements', file_name)
+            print(f"Processing: {pdf_file_path}")
+            
+            # Perform OCR on each PDF
+            pdf_ocr(pdf_file_path)
