@@ -12,3 +12,9 @@
    while Mac users may need to add 
 
    ```/Hussasin/Path/btao/tesseract/``` in path.
+
+   ### Using Llama3 API
+      The code uses Llama API judgement processing 
+      you may have to run (though it would be installed by requirements.txt file)
+      ```pip install groq
+      ```
