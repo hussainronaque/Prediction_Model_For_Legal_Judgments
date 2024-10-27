@@ -31,17 +31,15 @@ def extract_judgment(file_path) -> dict:
     Answer:
     """
 
-        # Call the API
     response_of_api = client.chat.completions.create(
-        model="llama3-8b-8192",
-        messages=[
-            {"role": "system", "content": "You are a legal assistant."},
-            {"role": "user", "content": prompt}
-        ],
-        max_tokens=500,
-        temperature=0.5
-    )
-
+            model="llama3-8b-8192",
+            messages=[
+                {"role": "system", "content": "You are a legal assistant."},
+                {"role": "user", "content": prompt}
+            ],
+            max_tokens=500,
+            temperature=0.5
+        )
     # Extract the response content
     # answer = response_of_api['choices'][0]['message']['content']
     # print(answer)
@@ -111,7 +109,7 @@ def process_files(input_directory):
 
 
 # Set the path for input files and output CSV
-input_directory = "ocr_output"  
+input_directory = "ocr_output2"  
 
 
 # Run the processing function

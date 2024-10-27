@@ -9,12 +9,13 @@
 
    Windows user may need to add pytesseract in path 
    ```C:\Program Files(x86)\Tesseract-OCR```
+   ``` I downloaded the version in Program Files(x86) folder and it worked for me.```
    while Mac users may need to add 
 
    ```/Hussasin/Path/btao/tesseract/``` in path.
 
    ### Using Llama3 API
-      The code uses Llama API judgement processing 
+      The code uses Llama 3.2 API for judgement processing 
       you may have to run (though it would be installed by requirements.txt file)
       ```pip install groq
       ```
