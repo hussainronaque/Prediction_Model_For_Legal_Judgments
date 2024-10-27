@@ -1,3 +1,5 @@
+
+from pdf_downloader import *
 import pytesseract
 from pdf2image import convert_from_path
 import os
@@ -10,6 +12,7 @@ pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files (x86)\\Tesseract-OCR\
 
 def pdf_to_images(pdf_path):
     # Converts a PDF file to images (one image per page).
+    print(f"Converting {pdf_path} to images...")
     images = convert_from_path(pdf_path)
     return images
 
@@ -18,10 +21,12 @@ def ocr_image(image):
     text = pytesseract.image_to_string(image)
     return text
 
-def pdf_ocr(pdf_path, output_dir='ocr_output'):
+def pdf_ocr(pdf_path, output_dir='./web_scraper/ocr_output'):
+
+    # Ensure the output directory exists
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-
+    print(f"Extracting text from {pdf_file_path}")
     # Convert PDF to images
     images = pdf_to_images(pdf_path)
 
