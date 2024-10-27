@@ -91,6 +91,7 @@ def process_files(input_directory, output_file):
     data = []
 
     # Loop through each file in the input directory
+    print(os.listdir(input_directory))
     for filename in os.listdir(input_directory):
         if filename.endswith(".txt"):  # Only process text files
             file_path = os.path.join(input_directory, filename)
