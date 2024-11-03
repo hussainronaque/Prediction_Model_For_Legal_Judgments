@@ -5,10 +5,10 @@ from pdf2image import convert_from_path
 import os
 
 # For Windows users, you may need to specify the path to the Tesseract executable
-pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files (x86)\\Tesseract-OCR\\tesseract.exe'
+#pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files (x86)\\Tesseract-OCR\\tesseract.exe'
 
 #For Mac users, you may need to specify the path to the Tesseract executable
-# pytesseract.pytesseract.tesseract_cmd = '/opt/homebrew/bin/tesseract'
+pytesseract.pytesseract.tesseract_cmd = '/opt/homebrew/bin/tesseract'
 
 def pdf_to_images(pdf_path):
     # Converts a PDF file to images (one image per page).

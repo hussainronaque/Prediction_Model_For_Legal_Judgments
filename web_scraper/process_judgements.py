@@ -5,7 +5,6 @@ import pandas as pd
 
 load_dotenv()
 api_key = os.getenv("GROQ_API_KEY")
-
 client = Groq(api_key=api_key)
 
 def extract_judgment(file_path) -> dict:
@@ -13,28 +12,24 @@ def extract_judgment(file_path) -> dict:
     with open(file_path, 'r', encoding='utf-8') as file:
         print(f"Reading file: {file_path}")
         content = file.read()
-    
+
     # Define maximum chunk size based on context limit
     max_chunk_size = 17000  # Adjust this as necessary
 
     # Split content into manageable chunks
     content_chunks = [content[i:i + max_chunk_size] for i in range(0, len(content), max_chunk_size)]
-    
+
     # Initialize full response dictionary
     full_response = {'scenario': '', 'witnesses': '', 'judgment': ''}
 
     for chunk in content_chunks:
-        prompt = f"""
+        prompt = f""" 
         Here is a part of a legal judgment. Extract and summarize the crime scenario and the final judgment in the following format:
         - Crime Scenario: [Brief description of what happened, how, when, and who was involved, what were the charges]
         - Witnesses: [witnesses and their testimonies]
         - Judgment: [Summarized verdict, sentencing, and basis of decision, section of law applied]
-        
-        Judgment:
-        {chunk}
-        
-        Answer:
-        """
+        Judgment: {chunk}
+        Answer: """
         
         response_of_api = client.chat.completions.create(
             model="llama3-8b-8192",
@@ -45,7 +40,7 @@ def extract_judgment(file_path) -> dict:
             max_tokens=1500,
             temperature=0.5
         )
-        
+
         # Extract response content for this chunk
         response_text = response_of_api.choices[0].message.content
         
@@ -72,21 +67,27 @@ def process_files(input_directory, output_directory):
     for filename in os.listdir(input_directory):
         if filename.endswith(".txt"):  # Only process text files
             file_path = os.path.join(input_directory, filename)
+            
+            # Check if the corresponding Excel file already exists
+            output_path = os.path.join(output_directory, filename.replace('.txt', '.xlsx'))
+            if os.path.exists(output_path):
+                print(f"Skipping {filename}, Excel file already exists at {output_path}.")
+                continue  # Skip processing if Excel file already exists
+
             if not os.path.exists(output_directory):
                 os.makedirs(output_directory)
-            output_path = os.path.join(output_directory, filename.replace('.txt', '.xlsx'))
-            
+
             # Extract the judgment data
             result = extract_judgment(file_path)
-            
+
             # Convert result to a DataFrame for saving as Excel
             df = pd.DataFrame([result])
             df.to_excel(output_path, index=False, engine='openpyxl')
             print(f"Processed {filename} and saved to {output_path}.")
 
-# Set the path for input files
-input_directory = "C:/Users/hp-15/Disc D/University Files/fifth semester/DL/Deep_Learning_Project/web_scraper/ocr_output"
-output_directory = "C:/Users/hp-15/Disc D/University Files/fifth semester/DL/Deep_Learning_Project/web_scraper/processed_judgements"
+# Set the path for input files and output directory
+input_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/ocr_output"
+output_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/processed_judgements"
 
 if __name__ == '__main__':
     # Check if the input directory exists
@@ -95,7 +96,6 @@ if __name__ == '__main__':
     else:
         # Run the processing function
         process_files(input_directory, output_directory)
-
 
 
 # import os
