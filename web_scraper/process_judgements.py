@@ -63,6 +63,9 @@ def extract_judgment(file_path) -> dict:
     return full_response
 
 def process_files(input_directory, output_directory, checking_path):
+    #check if we have done .txt file in the input
+    check_file_path = os.path.join
+
     # Loop through each file in the input directory
     for filename in os.listdir(input_directory):
         if filename.endswith(".txt"):  # Only process text files
@@ -90,9 +93,10 @@ def process_files(input_directory, output_directory, checking_path):
             print(f"Processed {filename} and saved to {output_path}.")
 
 # Set the path for input files, output directory, and checking path
-input_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/ocr_output"
-output_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/processed_judgements"
-checking_path = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/processed_judgement_done"
+input_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\ocr_output"
+output_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\processed_judgements"
+
+checking_path = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\processed_judgements_final"
 
 if __name__ == '__main__':
     # Check if the input directory exists
