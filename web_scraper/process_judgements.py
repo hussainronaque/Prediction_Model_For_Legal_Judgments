@@ -62,32 +62,37 @@ def extract_judgment(file_path) -> dict:
 
     return full_response
 
-def process_files(input_directory, output_directory):
+def process_files(input_directory, output_directory, checking_path):
     # Loop through each file in the input directory
     for filename in os.listdir(input_directory):
         if filename.endswith(".txt"):  # Only process text files
             file_path = os.path.join(input_directory, filename)
             
-            # Check if the corresponding Excel file already exists
-            output_path = os.path.join(output_directory, filename.replace('.txt', '.xlsx'))
-            if os.path.exists(output_path):
-                print(f"Skipping {filename}, Excel file already exists at {output_path}.")
+            # Check if the corresponding Excel file already exists in checking_path
+            checking_file_path = os.path.join(checking_path, filename.replace('.txt', '.xlsx'))
+            if os.path.exists(checking_file_path):
+                print(f"Skipping {filename}, Excel file already exists at {checking_file_path}.")
                 continue  # Skip processing if Excel file already exists
 
+            # Ensure the output directory exists
             if not os.path.exists(output_directory):
                 os.makedirs(output_directory)
 
             # Extract the judgment data
             result = extract_judgment(file_path)
 
+            # Define the path to save the new Excel file in output_directory
+            output_path = os.path.join(output_directory, filename.replace('.txt', '.xlsx'))
+
             # Convert result to a DataFrame for saving as Excel
             df = pd.DataFrame([result])
             df.to_excel(output_path, index=False, engine='openpyxl')
             print(f"Processed {filename} and saved to {output_path}.")
 
-# Set the path for input files and output directory
+# Set the path for input files, output directory, and checking path
 input_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/ocr_output"
 output_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/processed_judgements"
+checking_path = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/processed_judgement_done"
 
 if __name__ == '__main__':
     # Check if the input directory exists
@@ -95,7 +100,7 @@ if __name__ == '__main__':
         print(f"Directory {input_directory} does not exist.")
     else:
         # Run the processing function
-        process_files(input_directory, output_directory)
+        process_files(input_directory, output_directory, checking_path)
 
 
 # import os
