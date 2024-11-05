@@ -21,7 +21,7 @@ def ocr_image(image):
     text = pytesseract.image_to_string(image)
     return text
 
-def pdf_ocr(pdf_path, output_dir='./web_scraper/ocr_output'):
+def pdf_ocr(pdf_path, output_dir='./ocr_output'):
 
     # Ensure the output directory exists
     if not os.path.exists(output_dir):
