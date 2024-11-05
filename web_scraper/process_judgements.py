@@ -73,6 +73,7 @@ def process_files(input_directory, output_directory, checking_path):
             
             # Check if the corresponding Excel file already exists in checking_path
             checking_file_path = os.path.join(checking_path, filename.replace('.txt', '.xlsx'))
+  
             if os.path.exists(checking_file_path):
                 print(f"Skipping {filename}, Excel file already exists at {checking_file_path}.")
                 continue  # Skip processing if Excel file already exists
@@ -85,10 +86,20 @@ def process_files(input_directory, output_directory, checking_path):
             result = extract_judgment(file_path)
 
             # Define the path to save the new Excel file in output_directory
+ 
             output_path = os.path.join(output_directory, filename.replace('.txt', '.xlsx'))
-
-            # Convert result to a DataFrame for saving as Excel
+                # Check if the output path is too long
+            max_path_length = 260  # Windows maximum path length
+            if len(output_path) > max_path_length:
+                # Shorten the filename
+                base_filename = os.path.basename(filename).replace('.txt', '')
+                shortened_filename = base_filename[:50] + '.xlsx'  # Adjust length as needed
+                output_path = os.path.join(output_directory, shortened_filename)
+                    # Convert result to a DataFrame for saving as Excel
+        
             df = pd.DataFrame([result])
+ 
+
             df.to_excel(output_path, index=False, engine='openpyxl')
             print(f"Processed {filename} and saved to {output_path}.")
 
