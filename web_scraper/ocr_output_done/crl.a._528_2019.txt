@@ -31,7 +31,9 @@ For the (State) : Ch. M. Sarwar Sidhu, Addl. PG
 Date of Hearing : 29.09.2020
 
 JUDGMENT
-SAYYED MAZAHAR ALI AKBAR NAQVI, J:- Criminal appeal, by leave
+
+SAYYED MAZAHAR ALIAKBAR NAQVI, J:- Criminal appeal, by leave
+
 of the Court, is directed against the impugned judgment of learned
 Division Bench of Lahore High Court, Multan Bench, dated 14.01.2015
 passed in Capital Sentence Reference No.10/2011, Criminal Appeal
@@ -40,7 +42,7 @@ conviction of the appellant under section 302(b), 324, 186, 353, PPC read
 with section 7 Anti-Terrorism Act, 1997 awarded by the Special Judge,
 Anti-Terrorism Court, Dera Ghazi Khan vide judgment dated 08.08.2011
 was upheld but his sentence of death under section 302(b) PPC and
-under section 7 Anti-Terrorism Act,1997 was _ converted into imprisonment
+under section 7 Anti-Terrorism Act,1997 was converted into imprisonment
 for life. All sentences were ordered to run concurrently. The compensation
 
 awarded by the learned trial court and sentence in default thereof was
@@ -69,7 +71,7 @@ police official Muhammad Mohsin 411/C who was sitting in a nearly
 rampart retaliated by fire shot towards the assailant which missed too.
 Rao Naveed decamped towards north whereas Muhammad Hanif
 (appellant) ran towards south while resorting to firing. Muhammad Akram
-SI, Muhammad Tariq HC, Zulqarnain Shah 840/C, Muhammad Mohsin
+Sl, Muhammad Tariq HC, Zulqarnain Shah 840/C, Muhammad Mohsin
 411/C and Iqbal Shah (HC) chased him. Iqbal Shah being ahead of
 others, was likely to apprehend Muhammad Hanif who took a turn and
 made a fire shot at Iqbal Shah which landed on left side of his chest who
@@ -206,7 +208,7 @@ A close scrutiny of the record made it abundantly clear that
 the instant occurrence has taken place in the broad daylight whereas both
 the accused nominated in the crime report were previously known to the
 prosecution witnesses. The inter-se distance between the place of
-occurrence and police station is hardly 1% miles. Undeniably, the incident
+occurrence and police station is hardly 1 % miles. Undeniably, the incident
 has taken place in two phases, first in the court premises and the other
 when the police officials retaliated in the same coin, as a consequent both
 the accused tried to make their escape but in different directions. The
@@ -266,7 +268,7 @@ withdrawn while the only appeal arising out of the judgment of trial court
 was to be heard by a Bench comprising of two Judges of respective High
 Courts whereas it was to presided over by a Judge of the Supreme Court.
 The courts established under the legislation could not continue for long
-hence, the framer of law introduced another act “Anti-Terrorism Act,
+hence, the framer of law introduced another act “Anti-Terrorism Acct,
 1997”. The preamble of the said legislation was more exhaustive,
 cyclopaedic and potent while the other provisions of the act, were framed
 to provide legal cover to all judicial norms relating to administration of
@@ -274,7 +276,7 @@ criminal justice. The said legislation had already undergone judicial review
 since its inception by this Court in two cases reported as (PLD 1998 SC
 1445” Mehram Ali and others vs Federation of Pakistan and others” and
 (PLD 2001 SC 607) “Khan Asfandyar Wali and others Vs Federation of
-Pakistan through Cabinet Division, Islamabad and others’. In the aforesaid
+Pakistan through Cabinet Division, Islamabad and others”. In the aforesaid
 judgments all those provisions which were found inconsistent to any
 provision of the “constitution” and established principle of “due process”
 were struck down, hence, the said legislation is in field to deal with such
@@ -291,7 +293,7 @@ Anti-Terrorism Act, 1997
 An Act to provide for the prevention of terrorism, sectarian violence and for
 speedy trial of heinous offences;
 
-It was duly published in Gazette of Pakistan, Extraordinary Part I, August
+It was duly published in Gazette of Pakistan, Extraordinary Part |, August
 20, 1997 in the following terms: -
 
 No.F.9(39)/97-Legis.—The following Act of Majlis-e-Shoora (Parliament)
@@ -326,12 +328,11 @@ forces, civil armed forces, or a public servant;
 
 (3) The use or threat of use of any action falling within sub-section (2),
 which involves the use of firearms, explosive or any other weapon is
-
 terrorism, whether or not sub-section 1(c) is satisfied.
 
 The punishment of the aforesaid provisions is provided u/s 7 of Anti-
 
-Terrorism Act. Similarly, the 3° Schedule relating to cognizable offences
+Terrorism Act. Similarly, the 3" Schedule relating to cognizable offences
 Criminal Appeal No.528/19 in JP No.327/18 | 10
 Muhammad Hanif vs, The State
 
@@ -344,10 +345,9 @@ THE THIRD SCHEDULE
 
 1. Any act of terrorism within the meaning of this Act including those
 offences which may be added or amended in accordance with the
-
 provisions of section 34 of this Act.
 
-(ii) oeeeeeseseeeeeeeee
+(li) oeeeeeeeseseeeeeeeee
 
 (iii) firing or use of explosive by any device, including bomb blast in the
 
@@ -357,7 +357,7 @@ Provision of Section 34 of the act authorized to amend, modify, add or
 omit any part of the schedule notified by the Government, as a
 consequent the schedule was reframed vide Notification No.SO(Judl-
 
-1)10(I-36(1)/2010 dated 5" September, 2012.
+1)10(1-36(1)/2010 dated 5" September, 2012.
 
 While scanning the aforesaid provisions of Anti-Terrorism Act and the
 schedule appended, the offence committed by the petitioner, it is
@@ -381,7 +381,7 @@ Act, 1997. The charge sheet framed by the learned trial court fully
 endorsed the investigation carried out by the investigating officer of the
 local police. Although the petitioner has committed the crime at two
 different places commencing from the court premises and finally when he
-reached in front of Rana Abdul Sittar Tea-stall which is at distance of 1%
+reached in front of Rana Abdul Sittar Tea-stall which is at distance of 1 %
 kilometers it would be presumed one and the same transaction as per the
 spirit of law. As the act of the petitioner was in continuation till its
 conclusion and this aspect is fully covered by provision of section 235
@@ -397,7 +397,6 @@ he may be charged with, and tried at one trial for, every such offence.
 offence falling within two or more separate definitions of any law in force
 for the time being by which offences are defined or punished, the person
 accused of them may be charged with, and tried at one trial for, each of
-
 such offences.
 
 (3) Acts constituting one offence, but constituting when combined a
@@ -405,7 +404,6 @@ different offence. If several acts, of which one or more than one would by
 itself or themselves constitute an offence, constitute when combined a
 different offence, the person accused of them may be charged with, and
 tried at one trial for, the offence constituted by such acts when combined,
-
 and for any offence constituted by anyone, or more, of such acts.
 
 (4) Nothing contained in this section shall affect the Pakistan Penal Code,
@@ -505,13 +503,13 @@ State), NLR 2005 (Criminal) SC 501 (Shafqat Ali etc vs, The Stae), PLD
 (Muhammad Hanif Vs, The State). The observation made in 1990 SCMR
 1272 is as under: -
 
-“.-- Doctor’s evidence --- There is no principle of law that in
+“--- Doctor’s evidence --- There is no principle of law that in
 
-each and every case doctor's evidence must have
+each and every case doctors evidence must have
 
 preference over direct evidence — If witnesses have seen the
 
-incident and have implicated the accused and _ their
+incident and have implicated the accused and_ their
 
 statements have been accepted by Court, then any conflict
 
