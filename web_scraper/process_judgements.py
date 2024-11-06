@@ -109,10 +109,14 @@ def process_files(input_directory, output_directory, checking_path, processed_di
             print(f"Moved {filename} to {processed_path}.")
 
 # Set the path for input files, output directory, checking path, and processed directory
-input_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/ocr_output"
-output_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/processed_judgements"
-checking_path = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/processed_judgement_done"
-processed_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/ocr_output_done"
+# input_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/ocr_output"
+# output_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/processed_judgements"
+# checking_path = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/processed_judgement_done"
+# processed_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/ocr_output_done"
+input_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\ocr_output"
+output_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\processed_judgements"
+checking_path = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\processed_judgement_done"
+processed_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\ocr_output_done"
 
 if __name__ == '__main__':
     # Check if the input directory exists
