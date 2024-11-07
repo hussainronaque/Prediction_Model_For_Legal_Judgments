@@ -2,8 +2,8 @@ import os
 
 # Specify the paths for the folders
 pdf_folder = '/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/judgements_done'    # Path to the folder containing PDF files
-txt_folder = '/path/to/txt_folder'    # Path to the folder containing OCR .txt files
-xlsx_folder = '/path/to/xlsx_folder'  # Path to the folder containing .xlsx files
+txt_folder = '/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/ocr_output_done'    # Path to the folder containing OCR .txt files
+xlsx_folder = '/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/processed_judgements'  # Path to the folder containing .xlsx files
 
 # Get a set of PDF file names (without extension)
 pdf_files = {os.path.splitext(pdf)[0] for pdf in os.listdir(pdf_folder) if pdf.endswith('.pdf')}
