@@ -79,6 +79,16 @@ def process_files(input_directory, output_directory, checking_path, processed_di
             if os.path.exists(checking_file_path):
                 print(f"Skipping {filename}, Excel file already exists at {checking_file_path}.")
                 continue  # Skip processing if Excel file already exists
+            
+            # # Attempt to read the file to check if it's readable
+            # try:
+            #     with open(file_path, 'r') as file:
+            #         file.read()
+            # except Exception as e:
+            #     print(f"Cannot read {filename}, skipping due to error: {str(e)}")
+            #     continue  # Skip this file if it is not readable
+            
+            print(f"Processing {filename}...")
 
             # Ensure the output directory exists
             if not os.path.exists(output_directory):
@@ -109,14 +119,14 @@ def process_files(input_directory, output_directory, checking_path, processed_di
             print(f"Moved {filename} to {processed_path}.")
 
 # Set the path for input files, output directory, checking path, and processed directory
-input_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/ocr_output"
-output_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/data3"
-checking_path = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/data2"
-processed_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/ocr_output_done"
-# input_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\ocr_output"
-# output_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\processed_judgements"
-# checking_path = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\processed_judgement_done"
-# processed_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\ocr_output_done"
+# input_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/ocr_output"
+# output_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/data3"
+# checking_path = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/data2"
+# processed_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/ocr_output_done"
+input_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\Deep_Learning_Project\\web_scraper\\ocr_output"
+output_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\data_04"
+checking_path = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\data_04"
+processed_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\ocr_output_done"
 
 if __name__ == '__main__':
     # Check if the input directory exists
