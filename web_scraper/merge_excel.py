@@ -2,8 +2,8 @@ import pandas as pd
 import os
 
 # Define the path to the folder containing the .xlsx files
-folder_path = "C:/Users/hm08436/Documents/GitHub/Deep_Learning_Project/web_scraper"
-output_file = "data.xlsx"
+folder_path = 'C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\data_04'
+output_file = 'data4.xlsx'
 
 # List to hold the data from each file
 data_frames = []
