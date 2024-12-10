@@ -93,5 +93,7 @@ summaries = [summarize_chunk(chunk) for chunk in chunks]
 
 # Example usage:
 final_summary = recursive_summarization(summaries)
-print("Final Summary:", final_summary)
+with open("output.txt", "w") as file:
+    file.write(final_summary)
+    print("Final summary saved to output.txt.")
 

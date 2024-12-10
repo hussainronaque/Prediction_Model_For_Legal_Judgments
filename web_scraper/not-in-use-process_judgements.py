@@ -23,7 +23,7 @@ def extract_judgment(file_path) -> dict:
     # Initialize full response dictionary
     full_response = {'scenario': '', 'witnesses': '', 'judgment': ''}
 
-    for chunk in content_chunks:
+    for idx, chunk in enumerate(content_chunks):
         prompt = f""" 
         Here is a part of a legal judgment. Extract and summarize the crime scenario and the final judgment in the following format:
         - Crime Scenario: [Brief description of what happened, how, when, and who was involved, what were the charges]
@@ -44,6 +44,9 @@ def extract_judgment(file_path) -> dict:
 
         # Extract response content for this chunk
         response_text = response_of_api.choices[0].message.content
+        with open(f'response1{idx}.txt', 'w') as f:
+            f.write(response_text)
+
         
         # Parse and append each section to `full_response`
         in_scenario, in_witnesses, in_judgment = False, False, False
@@ -114,17 +117,18 @@ def process_files(input_directory, output_directory, checking_path, processed_di
             print(f"Processed {filename} and saved to {output_path}.")
 
             # Move the processed .txt file to the processed directory
-            processed_path = os.path.join(processed_directory, filename)
-            shutil.move(file_path, processed_path)
-            print(f"Moved {filename} to {processed_path}.")
+            # processed_path = os.path.join(processed_directory, filename)
+            # shutil.move(file_path, processed_path)
+            # print(f"Moved {filename} to {processed_path}.")
 
 # Set the path for input files, output directory, checking path, and processed directory
 # input_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/ocr_output"
 # output_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/data3"
 # checking_path = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/data2"
 # processed_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/ocr_output_done"
-input_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\Deep_Learning_Project\\web_scraper\\sample-check"
-output_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\output-check"
+# Set the path for input files, output directory, checking path, and processed directory
+input_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\check_folder"
+output_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\check_output"
 checking_path = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\data_04"
 processed_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\ocr_output_done"
 
