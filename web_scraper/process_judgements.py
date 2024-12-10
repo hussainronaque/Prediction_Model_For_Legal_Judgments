@@ -27,8 +27,8 @@ def extract_judgment(file_path) -> dict:
         prompt = f""" 
         Here is a part of a legal judgment. Extract and summarize the crime scenario and the final judgment in the following format:
         - Crime Scenario: [Brief description of what happened, how, when, and who was involved, what were the charges]
-        - Witnesses: [witnesses and their testimonies]
-        - Judgment: [Summarized verdict, sentencing, and basis of decision, section of law applied]
+        - Witnesses: [witnesses and their testimonies including all proseution witnesses pw]
+        - Judgment: [Summarized verdict, findings of the court, sentencing, and basis of decision, section of law applied]
         Judgment: {chunk}
         Answer: """
         
@@ -123,8 +123,8 @@ def process_files(input_directory, output_directory, checking_path, processed_di
 # output_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/data3"
 # checking_path = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/data2"
 # processed_directory = "/Users/hussainronaque/Documents/GitHub/Deep_Learning_Project/web_scraper/ocr_output_done"
-input_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\Deep_Learning_Project\\web_scraper\\ocr_output"
-output_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\data_04"
+input_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\Deep_Learning_Project\\web_scraper\\sample-check"
+output_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\output-check"
 checking_path = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\data_04"
 processed_directory = "C:\\Users\\hp-15\\Disc D\\University Files\\fifth semester\\DL\\Deep_Learning_Project\\web_scraper\\ocr_output_done"
 
