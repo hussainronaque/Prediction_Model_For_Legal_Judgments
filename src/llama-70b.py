@@ -29,7 +29,7 @@ def extract_judgment(file_path) -> dict:
     if estimated_tokens > 5000:  # Leave room for prompt and response
         # Truncate content to roughly 5000 tokens
         content = content[:20000]  # 20000 characters ≈ 5000 tokens
-        print("Warning: Content truncated to fit within token limits")
+        print("Warning: Content truncated to fit within token limits") # we are trying to keep the content within the token limits else it will throw an error
    
     # Prompt for the LLaMA API
     prompt = f""" 
