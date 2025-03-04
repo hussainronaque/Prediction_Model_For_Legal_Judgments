@@ -32,19 +32,25 @@ def extract_judgment(file_path) -> dict:
    
     # Prompt for DeepSeek API
     prompt = f""" 
-            Here is a part of a legal judgment. Extract and summarize the crime scenario and the final judgment in the following format:
-                - Crime Scenario: [Provide a complete description of the events, including what happened, how, when, who was involved, and the charges.]
-                - Witnesses: [List all witnesses and summarize their testimonies, including all prosecution witnesses (PWs).]
-                - Judgment: [ section of law applied in the judgment, Summarized verdict, findings of the court, sentencing, and basis of decision]
+    Here is a part of a legal judgment. Extract and summarize the crime scenario and the final judgment in the following format:
+        - Crime Scenario: [Provide a complete description of the events, including what happened, how, when, who was involved, and the charges.]
+        - Witnesses: [List all witnesses and summarize their testimonies, including all prosecution witnesses (PWs).]
+        - Judgment: [ section of law applied in the judgment, Summarized verdict, findings of the court, sentencing, and basis of decision]
 
 
-            Important:
-            - If this text is part of a longer document, ensure the response is complete and consistent with the context.
-            - Avoid truncating or omitting key details.
-            - Do not Hallucinate or add any information that is not present in the text.
-            Input: {content}
-           
-            Answer: """
+    Important:
+    - If this text is part of a longer document, ensure the response is complete and consistent with the context.
+    - Avoid truncating or omitting key details.
+    - Do not Hallucinate or add any information that is not present in the text.
+    Input: {content}
+        
+    Extract and structure the information as follows:
+    **Crime Scenario:** [Provide complete description including what happened, how, when, who was involved, and the charges]
+
+    **Witnesses:** [List all witnesses chronologically with their roles and key testimony points]
+
+    **Judgment:** [Include applicable sections of law, court's findings, reasoning, and final verdict with sentencing]
+    """
 
     response_of_api = client.chat.completions.create(
         model="deepseek-r1-distill-llama-70b",  # Replace existing model name with DeepSeek-R1-Zero 671B
@@ -98,7 +104,9 @@ def process_files(input_directory, output_directory):
     """
 
     # Loop through each file in the input directory
-    for filename in os.listdir(input_directory):
+    # for filename in os.listdir(input_directory):
+    for i in range (1):
+        filename = "Rahmatullah-Cr.MB.No.337-D-17.txt"
         if filename.endswith(".txt"):  # Only process text files
             file_path = os.path.join(input_directory, filename)
             
@@ -152,8 +160,8 @@ def process_files(input_directory, output_directory):
             print(f"Processed {filename} and saved to {output_path}.")
 
 # Set the path for input files, output directory, checking path, and processed directory
-input_directory = "/Users/hussainronaque/Documents/GitHub/Prediction_Model_For_Legal_Judgments/src/dataset/ocr_output"
-output_directory = "/Users/hussainronaque/Documents/GitHub/Prediction_Model_For_Legal_Judgments/src/dataset/data_deepseek"
+input_directory = "//Users/hussainronaque/Documents/GitHub/Prediction_Model_For_Legal_Judgments/src/dataset/weekly-judgements/chunk_8"
+output_directory = "/Users/hussainronaque/Documents/GitHub/Prediction_Model_For_Legal_Judgments/src/dataset/data_deepseek_without_fewshot"
 
 if __name__ == '__main__':
     # Check if the input directory exists
