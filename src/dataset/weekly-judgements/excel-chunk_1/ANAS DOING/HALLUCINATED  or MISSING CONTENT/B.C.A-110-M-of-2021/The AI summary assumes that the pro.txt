@@ -1,0 +1,27 @@
+The AI summary assumes that the prosecution argued that the accused might abscond or tamper with evidence. However, the judgment explicitly states that none of the usual grounds for bail cancellation were available to the petitioner (such as absconding, influencing witnesses, or committing a repeat offense).
+
+The actual argument made by the petitioner's counsel was based on ground No.(i)—that the trial judge ignored the serious charges against the accused, which fell under the prohibitory clause of section 497, Cr.P.C. The AI does not highlight this specific point.
+
+
+
+Defense Counsel’s Argument
+
+The AI summary states that the defense likely argued that bail had already been granted on merit and that there were no exceptional circumstances. While this is broadly correct, the AI misses the explicit legal reasoning referenced in the judgment:
+
+The defense relied on Supreme Court precedents (e.g., Muhammad Akram v. Zahid Iqbal, Samiullah v. Laig Zada) which establish that once a trial has commenced, higher courts avoid interfering with bail orders.
+
+The AI summary does not mention that the petitioner admitted in court that the trial had already commenced, which was a major factor in the dismissal.
+
+
+
+FIR Withdrawal Mentioned in the Judgment but Missing in the Summary
+
+The petitioner’s counsel argued that the previous FIR (No.1122 dated 07.11.2022), which influenced the bail decision, was later withdrawn. This was a crucial argument, but the AI completely omitted it.
+
+
+
+he Court’s Conclusion on Lack of Misuse of Bail
+
+The AI summary only briefly states that the court found no solid reason to cancel bail.
+
+However, the judgment clearly states that the accused did not misuse their bail, cause fear to the complainant, influence witnesses, or attempt to flee—all of which are grounds for cancellation. The AI should have explicitly stated that the court found none of these factors applicable.
