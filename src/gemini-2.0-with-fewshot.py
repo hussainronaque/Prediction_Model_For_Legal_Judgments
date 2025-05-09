@@ -67,7 +67,6 @@ def extract_judgment(text) -> dict:
     - If no witnesses are mentioned, use "No witnesses mentioned in the text."
     - Do NOT invent facts, dates, names, or details not presented or reasonably implied in the text.
     - If the case involves narcotics, drugs, or chars, return an OFF TOPIC IN A JSON object: {{}}
-    - Keep all information strictly factual and directly derived from the text.
     - For each section, extract ALL relevant information from the text.
 
   """
