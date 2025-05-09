@@ -57,15 +57,19 @@ def extract_judgment(text) -> dict:
 
     Extract and structure the information:
     - **Crime Scenario:** [Complete description of events, including what happened, how, when, who was involved, and charges.]
-    - **Witnesses:** [List all witnesses and summarize their testimonies, including all PWs.]
-    - **Prosecution Counsel Statement:** [Summarize key arguments; infer from trial outcome and evidence if not explicit.]
+    - **Witnesses:** [List all witnesses and summarize their testimonies, including all PWs. If no witnesses are mentioned, state "No witnesses mentioned."]
+    - **Prosecution Counsel Statement:** [Summarize key arguments; infer from trial outcome]
     - **Defense Counsel Statement:** [Summarize key arguments; infer from appeal reasoning if not explicit.]
     - **Judgment:** [Section of law, verdict, findings, sentencing, and basis of decision.]
 
-    Important:
-    - Ensure completeness and consistency with the context.
-    - Avoid omitting key details or adding unprovided information beyond reasonable inference.
-    - Infer counsel statements logically from the text’s implications if not explicitly stated.
+    GUIDELINES:
+    - For counsel statements not explicitly stated in the text: If you can reasonably infer from context, provide a brief logical inference based ONLY on information in the text. If inference isn't possible, use "No explicit statement provided in the text."
+    - If no witnesses are mentioned, use "No witnesses mentioned in the text."
+    - Do NOT invent facts, dates, names, or details not presented or reasonably implied in the text.
+    - If the case involves narcotics, drugs, or chars, return an OFF TOPIC IN A JSON object: {{}}
+    - Keep all information strictly factual and directly derived from the text.
+    - For each section, extract ALL relevant information from the text.
+
   """
     try:
         # Generate response using Gemini API
@@ -213,8 +217,8 @@ def process_files(input_directory, output_directory):
                 print(f"Created folder {case_folder} with analysis.xlsx and original.txt")
 
 # Set directories
-input_directory = r"C:\Users\hp-15\Disc D\University Files\fifth semester\DL\Deep_Learning_Project\src\dataset\weekly-judgements\chunk_1"  # Replace with your OCR folder path
-output_directory = r"C:\Users\hp-15\Disc D\University Files\fifth semester\DL\Deep_Learning_Project\src\dataset\weekly-judgements\excel-chunk_1"  # Replace with your output folder path
+input_directory = r"C:\Users\hp-15\Disc D\University Files\fifth semester\DL\Deep_Learning_Project\src\dataset\weekly-judgements\chunk_2"  # Replace with your OCR folder path
+output_directory = r"C:\Users\hp-15\Disc D\University Files\fifth semester\DL\Deep_Learning_Project\src\dataset\weekly-judgements\excel-chunk_2"  # Replace with your output folder path
 
 if __name__ == "__main__":
     if not os.path.exists(input_directory):
